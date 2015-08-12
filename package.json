@@ -1,0 +1,14 @@
+{
+  "name": "nh",
+  "version": "0.0.1",
+  "description": "haha",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
