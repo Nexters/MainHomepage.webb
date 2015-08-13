@@ -3,9 +3,16 @@ var app = angular
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
           .when('/',{
-              templateUrl: './templates/home/home.html'
+              templateUrl: './templates/About/About.html'
           })
-          .when('/asd', {
+          .when('/Activities', {
               templateUrl: './templates/Activities/asd.html'
-          });
+          })
+          .when('/Contact', {
+              templateUrl: './templates/Activities/asd.html'
+          })
+          .when('/Membership', {
+              templateUrl: './templates/Activities/asd.html'
+          })
+          .otherwise('/');
     }]);
