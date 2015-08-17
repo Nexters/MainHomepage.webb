@@ -3,16 +3,15 @@ var app = angular
     'membershipController',
     'activitesController',
     'contactController',
-    'ui.router'
+    'ui.router',
+    'productFactory'
   ]).config(['$urlRouterProvider','$stateProvider', function ($urlRouterProvider,$stateProvider) {
-
       $stateProvider
         //About
         .state('About',{
           url:'/',
           templateUrl: "templates/About/About.html"
         })
-
         //Activities
         .state('Activities-product',{
           url:'/Activities-product',
