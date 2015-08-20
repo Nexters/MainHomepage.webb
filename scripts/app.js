@@ -1,8 +1,10 @@
 var app = angular
   .module("app",[
-    'Activites-productController',
+    'Activites.productController',
+    'Activites.memberController',
     'ui.router',
-    'productFactory'
+    'productFactory',
+    'memberFactory'
   ]).config(['$urlRouterProvider','$stateProvider', function ($urlRouterProvider,$stateProvider) {
       $stateProvider
         //About
@@ -11,15 +13,26 @@ var app = angular
           templateUrl: "templates/About/About.html"
         })
         //----------Activities start----------------
+        .state('Activities',{
+          url:'/Activities',
+          templateUrl: "templates/Activities/Activities.html",
 
-        //Activities-product start
-        .state('Activities-product',{
-          url:'/Activities-product',
-          templateUrl: "templates/Activities/product.html",
-          controller: 'Activites-productController'
+        })
+        .state('Activities.member',{
+          url:'/member',
+          templateUrl: "templates/Activities/Activities.member.html",
+          controller: 'Activites.memberController'
+        })
+        .state('Activities.product',{
+          url:'/product',
+          templateUrl: "templates/Activities/Activities.product.html",
+          controller: 'Activites.productController'
         })
         //Activities-product end
 
-        
+
         $urlRouterProvider.otherwise('/');
-}]);
+}])
+.value('environment',{
+  domain: "http://localhost:8080/NextersHomepage/"
+})

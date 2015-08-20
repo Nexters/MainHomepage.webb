@@ -2,7 +2,7 @@
 var productFactory = angular.module('productFactory', [
 
 ]);
-productFactory.factory('product',function ($http,$q) {
+productFactory.factory('product',function ($http,$q,environment) {
   var product = {};
 
 
@@ -10,18 +10,21 @@ productFactory.factory('product',function ($http,$q) {
 
     var deferred = $q.defer();
 
-    $http.post('/asd.do', {msg:'hello word!'}).
-    then(function(response) {
-      // this callback will be called asynchronously
-      // when the response is available
-      deferred.resolve(response.data);
-    }, function(response) {
-      //deferred.rejec
-      console.log("err"+ response);
-      // called asynchronously if an error occurs
-      // or server returns response with an error status.
-    })
+    $http({
+      url: environment.domain+'api/main/getProjectList.do',
+    }).
+    success(function(response) {
+
+      console.log(response);
+      deferred.resolve(response.resData[0]);
+    }).
+    error(function(status) {
+      //your code when fails
+      console.log(status);
+    });
+
     return deferred.promise;
+
   }
 
   product.test1 = function () {

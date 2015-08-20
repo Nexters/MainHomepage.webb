@@ -4150,7 +4150,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #428bca;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #ddd;
+  --border: 1px solid #ddd;
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {

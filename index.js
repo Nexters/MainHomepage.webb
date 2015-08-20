@@ -10,8 +10,8 @@ app.post("/asd.do",function (req,res) {
 		zqc = { a:"456"},
 		zfc = { a:"789"}
 	];
-
-	console.log("asd.do!!!");
+	console.log(req.data);
+	//console.log("asd.do!!!");
 	res.send(asd);
 })
 
