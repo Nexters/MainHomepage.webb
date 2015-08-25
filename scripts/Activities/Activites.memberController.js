@@ -15,7 +15,5 @@ memberController.controller('Activites.memberController',function ($scope,member
     })
     $scope.geners=data;
   })
-
-
-
+  
 })

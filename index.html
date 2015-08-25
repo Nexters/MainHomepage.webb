@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="./css/bootstrap.css">
 	<link rel="stylesheet" href="./css/bootstrap-theme.css">
 	<link rel="stylesheet" href="./css/style.css">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
 	<!-- skin -->
 	<link rel="stylesheet" href="./skin/default.css">
@@ -22,7 +23,8 @@
 </head>
 
 <body ng-app="app">
-	<div class="custom-size" style="background-color: #ffffff">
+
+
 		<section id="header" class="appear"></section>
 		<div class="navbar navbar-fixed-top custom-size" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(255,255,255,0);" data-300="line-height:60px; height:60px; background-color:rgba(32,32,32,0.9);">
 			<div class="container custom-size">
@@ -47,22 +49,23 @@
 							<li><a style="font-size:15px; line-height:120%;" href="#/Membership">Membership</a></li>
 						</ul>
 					</div>
-					<div class="row">
+					<!--<div class="row">
 						<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
 							<li  class="active "><a style="font-size:15px; line-height:120%;" href="#/">About</a></li>
 						</ul>
-					</div>
-
+					</div>-->
 				</div><!--/.navbar-collapse -->
 			</div>
 		</div>
 		<!--시작 html별로 불러오기-->
+		<div class="container custom-size">
 		<div ui-view></div>
-
+	</div>
 	</div>
 
-
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
 	<script src="./js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	<script src="./js/jquery.js"></script>
@@ -79,16 +82,26 @@
 	<script src="./js/validate.js"></script>
 	<script src="./js/main.js"></script>
 	<script src="./node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-	<!--angular app -->
-	<script src="./scripts/app.js"></script>
 
+	<!--angular app -->
+
+	<script src="./scripts/app.js"></script>
 	<!--angular controllers-->
 	<script src="./scripts/Membership/MembershipController.js"></script>
 	<script src="./scripts/Contact/ContactController.js"></script>
 	<script src="./scripts/Activities/Activites.memberController.js"></script>
 	<script src="./scripts/Activities/Activites.productController.js"></script>
+	<script src="./scripts/test.js"></script>
 	<!--angular factory-->
 	<script src="./scripts/factory/productFactory.js"></script>
 	<script src="./scripts/factory/memberFactory.js"></script>
+
+
+	<!--ui bootstrap -->
+	<script src="./asd/ui-bootstrap-custom-tpls-0.13.3.js">
+
+	</script>
+
+
 </body>
 </html>

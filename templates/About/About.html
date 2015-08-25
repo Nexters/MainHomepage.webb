@@ -1,23 +1,23 @@
-<section class="featured">
-  <div class="container custom-size">
-    <div class="row mar-bot40">
-      <div class="col-md-10 col-md-offset-1">
-
-        <div class="align-center">
-          <i class="fa fa-flask fa-5x mar-bot20"></i>
-          <h2 class="slogan">We are Nexters</h2>
-          <p style="font-size:15px;">
-            개발자와 디자이너를 위한 최고의 IT 연합동아리 NEXTERS<br>
-            연합동아리 넥스터즈는 IT 생태계의 주인공들인 개발자와 디자이너들을 위한 모임입니다.<br><br>
-            개발자, 디자이너 혼자서 원하는 멋진 어플리케이션을 만들기는 어렵습니다.<br>
-            함께 프로젝트를 진행할 개발자와 디자이너를 찾는 것 또한 쉽지 않은 일입니다.
-            넥스터즈에는 함께 새로운 프로젝트를 진행할 수 있도록 도움을 주고 받을 수 있는 친구들이 있습니다.
-          </p>
-        </div>
-      </div>
+<div class="custom-size" style="background-color: #ffffff">
+  <div ng-controller="CarouselDemoCtrl" id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}">
+          <div class="carousel-caption">
+            <h2 class="slogan" style="color: #fff;font-size: 48px;font-weight: 900;">We are Nexters</h2>
+            <p style="font-size:15px;">
+              개발자와 디자이너를 위한 최고의 IT 연합동아리 NEXTERS<br>
+              연합동아리 넥스터즈는 IT 생태계의 주인공들인 개발자와 디자이너들을 위한 모임입니다.<br><br>
+              개발자, 디자이너 혼자서 원하는 멋진 어플리케이션을 만들기는 어렵습니다.<br>
+              함께 프로젝트를 진행할 개발자와 디자이너를 찾는 것 또한 쉽지 않은 일입니다.
+              넥스터즈에는 함께 새로운 프로젝트를 진행할 수 있도록 도움을 주고 받을 수 있는 친구들이 있습니다.
+            </p>
+          </div>
+        </slide>
+      </carousel>
     </div>
   </div>
-</section>
 
 <!-- services -->
 <section id="section-contact" class="section bg-white">

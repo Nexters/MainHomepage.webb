@@ -4,13 +4,19 @@ var app = angular
     'Activites.memberController',
     'ui.router',
     'productFactory',
-    'memberFactory'
+    'memberFactory',
+    'ui.bootstrap',
+    'carousel'
   ]).config(['$urlRouterProvider','$stateProvider', function ($urlRouterProvider,$stateProvider) {
       $stateProvider
         //About
         .state('About',{
           url:'/',
           templateUrl: "templates/About/About.html"
+        })
+        .state('Test',{
+          url:'/test',
+          templateUrl: "templates/test.html"
         })
         //----------Activities start----------------
         .state('Activities',{
