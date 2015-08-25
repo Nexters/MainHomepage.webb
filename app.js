@@ -36,6 +36,16 @@ var app = angular
         })
         //Activities-product end
 
+        //Contact
+        .state('Contact',{
+          url:'/contact',
+          templateUrl: "templates/Contact/Contact.html",
+        })
+        .state('Contact.sendTo',{
+          url:'/sendTo',
+          templateUrl: "templates/Contact/Contact.sendTo.html",
+        })
+        //Contact end
 
         $urlRouterProvider.otherwise('/');
 }])
