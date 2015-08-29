@@ -25,7 +25,7 @@
 <body ng-app="app">
 
 
-		<section id="header" class="appear">
+		<section ng-controller="navControler" id="header" class="appear">
 		<div class="navbar navbar-fixed-top custom-size" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(255,255,255,0);" data-300="line-height:60px; height:60px; background-color:rgba(32,32,32,0.9);">
 			<div class="container custom-size">
 				<div class="navbar-header">
@@ -43,10 +43,10 @@
 				<div class="navbar-collapse collapse">
 					<div class="row">
 						<ul class="nav navbar-nav" data-0="margin-top:25px;" data-300="margin-top:5px;">
-							<li  class="active "><a style="font-size:15px; line-height:120%;" href="#/">About</a></li>
-							<li><a style="font-size:15px; line-height:120%;" ui-sref="Activities">Activities</a></li>
-							<li><a style="font-size:15px; line-height:120%;" ui-sref="Contact">Contact</a></li>
-							<li><a style="font-size:15px; line-height:120%;" href="#/Membership">Membership</a></li>
+							<li  class="active "><a ng-click="gotoTop()" style="font-size:15px; line-height:120%;" href="#/">About</a></li>
+							<li><a ng-click="gotoTop()" style="font-size:15px; line-height:120%;" ui-sref="Activities.member">Activities</a></li>
+							<li><a ng-click="gotoTop()" style="font-size:15px; line-height:120%;" ui-sref="Contact.sendTo">Contact</a></li>
+							<li><a ng-click="gotoTop()" style="font-size:15px; line-height:120%;" ui-sref="Membership">Membership</a></li>
 						</ul>
 					</div>
 					<!--<div class="row">
